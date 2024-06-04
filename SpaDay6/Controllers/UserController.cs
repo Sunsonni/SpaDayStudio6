@@ -22,6 +22,8 @@ namespace SpaDay6.Controllers
             if(newUser.Password == verify)
             {
                 ViewBag.Username = newUser.Username;
+                ViewBag.Email = newUser.Email;
+                ViewBag.Date = newUser.Date;
                 return View("Index");
             }
             else
