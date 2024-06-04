@@ -1,0 +1,27 @@
+<form method="post" asp-controller="User" asp-action="SubmitAddUserForm">
+    <div>
+            <div>
+            <label for="username">Username:</label><br>
+                <input type="text" name="username" value="@ViewBag.Username">
+            </div>
+            <div>
+            <label for="email">Email:</label><br>
+                <input type="email" name="email" value="@ViewBag.Email">
+            </div>
+            <div>
+           
+            <label for="password">Password:</label><br>
+                <input type="password" name="password">
+            </div>
+            <div>
+            <label for="password">Confirm Password:</label><br>
+                <input type="password" name="verify">
+            </div>
+             @if(ViewBag.error != null)
+            {
+                <p style="color:red;">@ViewBag.error</p>
+            }
+            <br>
+    <input type="submit" value="Submit">
+    </div>
+</form>
